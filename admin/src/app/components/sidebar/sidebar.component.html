@@ -1,0 +1,14 @@
+<section class="sidebar">
+  <div class="sidebar__elements" *ngFor="let element of sideBarElements | slice : startItem:itemLimit"
+       (click)="select(element)" [ngClass]="{active: isActive(element)}">
+    <div class="sidebar__elements_item" *ngIf="element">
+      <a href="#" class="sidebar__elements_item-link">{{element}}</a>
+    </div>
+  </div>
+  <button class="sidebar__elements_btn" *ngIf="itemLimit < sideBarElements.length" (click)="showMoreItems()">
+    SHOW MORE
+  </button>
+  <button class="sidebar__elements_btn" *ngIf="itemLimit > 3" (click)="showLessItems()">
+    SHOW LESS
+  </button>
+</section>

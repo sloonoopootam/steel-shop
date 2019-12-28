@@ -1,0 +1,36 @@
+.sidebar {
+  width: 12%;
+  box-sizing: border-box;
+  padding-bottom: 100%;
+  background: #c2dae6;
+  padding-left: 3%;
+}
+
+.sidebar__elements {
+  padding: 20px 0;
+
+}
+
+.sidebar__elements_item-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: darkblue;
+  padding: 5px 10px;
+}
+
+.sidebar__elements_item-link:hover {
+  text-decoration: underline;
+}
+
+.sidebar__elements_btn {
+  background: blue;
+  color: white;
+  font-size: 18px;
+  margin-left: -10px;
+}
+
+.active a {
+  color:white;
+  background: blue;
+}

@@ -1,0 +1,42 @@
+<header class="header">
+  <div class="header__logo">
+    <a class="header__logo_link" href="#">
+      <img src="https://www.sellacious.com/images/2017/04/06/administrator.png" alt="user" class="header__logo_img"/>
+    </a>
+    <div class="header__logo_title">
+      <p>Admin panel</p>
+    </div>
+  </div>
+  <div class="header__navbar">
+    <ul class="header__navbar_mylist">
+      <a class="header__navbar_user" href="#">
+        <img
+          src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png"
+          alt="user" class="header__navbar_user user__img"/>
+      </a>
+      <div class="header__navbar_user user_name">
+        {{userName}}
+      </div>
+    </ul>
+    <ul class="header__navbar_menu user__menu">
+      <li><a href="#" class="user__menu user__menu_items"> My Profile </a></li>
+      <li><a href="#" class="user__menu user__menu_items"> My Balance </a></li>
+      <li><a href="#" class="user__menu user__menu_items"> Inbox </a></li>
+      <li appSubmenu><a href="#" class="user__menu user__menu_items"> Account Setting </a></li>
+      <ul class="header__submenu">
+        <li><a href="#" class="user__menu_subitems"> --> Profile </a></li>
+        <li><a href="#" class="user__menu_subitems"> --> Set status </a></li>
+        <li><a href="#" class="user__menu_subitems"> --> Settings </a></li>
+      </ul>
+    </ul>
+    <div class="header__auth" *ngIf="isLoggedIn">
+      <button class="header__auth_btn" (click)="logOutEv()">Sign out</button>
+    </div>
+    <div class="header__auth" *ngIf="!isLoggedIn">
+      <label class="header__auth_input" title="User Name">User Name
+        <input (keyup)="onKeyEv()" placeholder="Enter user name">
+      </label>
+      <button class="header__auth_btn" (click)="logInEv()">Sign in</button>
+    </div>
+  </div>
+</header>
